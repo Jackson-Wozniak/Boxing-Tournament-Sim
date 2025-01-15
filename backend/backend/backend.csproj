@@ -25,6 +25,7 @@
       <Folder Include="src\Controllers\" />
       <Folder Include="src\Dto\" />
       <Folder Include="src\Exceptions\" />
+      <Folder Include="src\Factory\" />
       <Folder Include="src\Services\" />
     </ItemGroup>
 
