@@ -8,6 +8,8 @@ public class Fighter
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public long Id { get; set; }
+    
+    [MaxLength(100)]
     public string Name { get; set; }
     public Attributes Attributes { get; set; }
 
