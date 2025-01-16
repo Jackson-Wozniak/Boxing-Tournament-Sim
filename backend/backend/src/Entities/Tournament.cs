@@ -10,6 +10,8 @@ public class Tournament
     public int FighterCount { get; set; }
 
     public List<TournamentRound> TournamentRounds { get; set; } = new List<TournamentRound>();
+    
+    public Tournament() { }
 
     public Tournament(string name, List<Fighter> fighters)
     {

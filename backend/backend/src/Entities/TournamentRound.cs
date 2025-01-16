@@ -16,6 +16,8 @@ public class TournamentRound
     public Tournament Tournament { get; set; }
 
     public List<Matchup> Matchups { get; set; } = new List<Matchup>();
+    
+    public TournamentRound() { }
 
     public TournamentRound(Tournament tournament, int round, List<Fighter> fighters)
     {

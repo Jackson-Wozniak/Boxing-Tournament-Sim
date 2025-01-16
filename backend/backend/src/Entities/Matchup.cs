@@ -7,7 +7,7 @@ public class Matchup
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    private long Id { get; set; }
+    public long Id { get; set; }
     
     [ForeignKey(nameof(FighterOne))]
     public long FighterOneId { get; set; }
@@ -26,6 +26,8 @@ public class Matchup
     
     [ForeignKey(nameof(Round) + "," + nameof(TournamentName))]
     public TournamentRound TournamentRound { get; set; }
+    
+    public Matchup() { }
 
     public Matchup(Fighter f1, Fighter f2, TournamentRound round)
     {

@@ -12,6 +12,8 @@ public class Fighter
     [MaxLength(100)]
     public string Name { get; set; }
     public Attributes Attributes { get; set; }
+    
+    public Fighter() { }
 
     public Fighter(string name, Attributes attributes)
     {

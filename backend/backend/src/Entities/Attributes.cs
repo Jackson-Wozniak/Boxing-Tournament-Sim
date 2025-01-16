@@ -17,6 +17,8 @@ public class Attributes
         Offense = 50;
         Defense = 50;
     }
+    
+    public Attributes() { }
 
     public int Overall()
     {
