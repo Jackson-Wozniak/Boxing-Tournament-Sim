@@ -10,11 +10,11 @@ public class Matchup
     private long Id { get; set; }
     
     [ForeignKey(nameof(FighterOne))]
-    public int FighterOneId { get; set; }
+    public long FighterOneId { get; set; }
     public Fighter FighterOne { get; set; }
 
     [ForeignKey(nameof(FighterTwo))]
-    public int FighterTwoId { get; set; }
+    public long FighterTwoId { get; set; }
     public Fighter FighterTwo { get; set; }
 
     [Required]
@@ -26,4 +26,14 @@ public class Matchup
     
     [ForeignKey(nameof(Round) + "," + nameof(TournamentName))]
     public TournamentRound TournamentRound { get; set; }
+
+    public Matchup(Fighter f1, Fighter f2, TournamentRound round)
+    {
+        TournamentName = round.TournamentName;
+        TournamentRound = round;
+        FighterOneId = f1.Id;
+        FighterTwoId = f2.Id;
+        FighterOne = f1;
+        FighterTwo = f2;
+    }
 }

@@ -18,4 +18,10 @@ public class Fighter
         Name = name;
         Attributes = attributes;
     }
+
+    public int CompareTo(Fighter fighter2)
+    {
+        if (Attributes.Overall() >= fighter2.Attributes.Overall()) return 1;
+        return -1;
+    }
 }

@@ -16,4 +16,17 @@ public class TournamentRound
     public Tournament Tournament { get; set; }
 
     public List<Matchup> Matchups { get; set; } = new List<Matchup>();
+
+    public TournamentRound(Tournament tournament, int round, List<Fighter> fighters)
+    {
+        Tournament = tournament;
+        TournamentName = tournament.Name;
+        Round = round;
+        fighters.Sort((f1, f2) => f1.CompareTo(f2));
+        for (var i = 0; i < fighters.Count / 2; i++)
+        {
+            var matchup = new Matchup(fighters[i], fighters[fighters.Count - i - 1], this);
+            Matchups.Add(matchup);
+        }
+    }
 }
